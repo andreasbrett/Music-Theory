@@ -1,0 +1,172 @@
+<h1>
+  Music Theory
+</h1>
+
+<p>
+	<select id="select_root" onchange="showKey()"></select>
+	<select id="select_mode" onchange="showKey()">
+		<option value="ionian">Ionian / Major</option>
+    <option value="dorian">Dorian</option>
+    <option value="phrygian">Phrygian</option>
+    <option value="lydian">Lydian</option>
+    <option value="mixolydian">Mixolydian</option>
+    <option value="aeolian">Aeolian / Minor</option>
+    <option value="locrian">Locrian</option>
+	</select>
+	<select id="select_flat" onchange="populateRootNotes(); showKey();">
+		<option value="sharp">#</option>
+		<option value="flat">b</option>
+	</select>
+	<select id="select_quads" onchange="showKey()">
+		<option value="triads">triads</option>
+		<option value="quads">quads</option>
+	</select>
+</p>
+
+<table>
+  <tr>
+    <th>&nbsp;</th>
+    <th id="level_1">I</th>
+    <th id="level_2">II</th>
+    <th id="level_3">III</th>
+    <th id="level_4">IV</th>
+    <th id="level_5">V</th>
+    <th id="level_6">VI</th>
+    <th id="level_7">VII</th>
+  </tr>
+  <tr>
+    <td class="bold wide left">Key</td>
+    <td id="chord_1"></td>
+    <td id="chord_2"></td>
+    <td id="chord_3"></td>
+    <td id="chord_4"></td>
+    <td id="chord_5"></td>
+    <td id="chord_6"></td>
+    <td id="chord_7"></td>
+  </tr>
+  <tr>
+    <td class="bold wide left">Parallel Key</td>
+    <td id="par_key_chord_1"></td>
+    <td id="par_key_chord_2"></td>
+    <td id="par_key_chord_3"></td>
+    <td id="par_key_chord_4"></td>
+    <td id="par_key_chord_5"></td>
+    <td id="par_key_chord_6"></td>
+    <td id="par_key_chord_7"></td>
+  </tr>
+  <tr>
+    <td class="bold wide left">Parallel Chord</td>
+    <td id="par_chord_1"></td>
+    <td id="par_chord_2"></td>
+    <td id="par_chord_3"></td>
+    <td id="par_chord_4"></td>
+    <td id="par_chord_5"></td>
+    <td id="par_chord_6"></td>
+    <td id="par_chord_7"></td>
+  </tr>
+  <tr>
+    <td class="bold wide left">Secondary Dominant</td>
+    <td id="secdom_1">-</td>
+    <td id="secdom_2"></td>
+    <td id="secdom_3"></td>
+    <td id="secdom_4"></td>
+    <td id="secdom_5"></td>
+    <td id="secdom_6"></td>
+    <td id="secdom_7"></td>
+  </tr>
+</table>
+
+<h2>Guitar</h2>
+
+<p>
+	<select id="select_tuning" onchange="showKey()">
+		<option value="e-std">E-Standard</option>
+		<option value="d-std">D-Standard</option>
+    <option value="c-std">C-Standard</option>
+		<option value="drop-d">Drop-D</option>
+		<option value="drop-c">Drop-C</option>
+	</select>
+	<select id="select_progression" onchange="showKey()">
+		<option value="1-5-6-4">Pop (1-5-6-4)</option>
+		<option value="1-6-5-4">Pop (1-6-5-4)</option>
+		<option value="1-6-5-4">Pop (1-4-6-5)</option>
+	</select>
+</p>
+
+<table id="guitar">
+<tr>
+	<th class="fret0">0</th>
+	<th>1</th>
+	<th>2</th>
+	<th>3</th>
+	<th>4</th>
+	<th>5</th>
+	<th>6</th>
+	<th>7</th>
+	<th>8</th>
+	<th>9</th>
+	<th>10</th>
+	<th>11</th>
+	<th class="fret12">12</th>
+</tr>
+<tr>
+	<td id="string4_0"></td>
+	<td id="string4_1"></td>
+	<td id="string4_2"></td>
+	<td id="string4_3"></td>
+	<td id="string4_4"></td>
+	<td id="string4_5"></td>
+	<td id="string4_6"></td>
+	<td id="string4_7"></td>
+	<td id="string4_8"></td>
+	<td id="string4_9"></td>
+	<td id="string4_10"></td>
+	<td id="string4_11"></td>
+	<td id="string4_12"></td>
+</tr>
+<tr>
+	<td id="string5_0"></td>
+	<td id="string5_1"></td>
+	<td id="string5_2"></td>
+	<td id="string5_3"></td>
+	<td id="string5_4"></td>
+	<td id="string5_5"></td>
+	<td id="string5_6"></td>
+	<td id="string5_7"></td>
+	<td id="string5_8"></td>
+	<td id="string5_9"></td>
+	<td id="string5_10"></td>
+	<td id="string5_11"></td>
+	<td id="string5_12"></td>
+</tr>
+<tr>
+	<td id="string6_0"></td>
+	<td id="string6_1"></td>
+	<td id="string6_2"></td>
+	<td id="string6_3"></td>
+	<td id="string6_4"></td>
+	<td id="string6_5"></td>
+	<td id="string6_6"></td>
+	<td id="string6_7"></td>
+	<td id="string6_8"></td>
+	<td id="string6_9"></td>
+	<td id="string6_10"></td>
+	<td id="string6_11"></td>
+	<td id="string6_12"></td>
+</tr>
+<tr>
+	<th class="fret0">|</th>
+	<th></th>
+	<th></th>
+	<th>&oslash;</th>
+	<th></th>
+	<th>&oslash;</th>
+	<th></th>
+	<th>&oslash;</th>
+	<th></th>
+	<th>&oslash;</th>
+	<th></th>
+	<th></th>
+	<th class="fret12">&oslash;&oslash;</th>
+</tr>
+</table>
