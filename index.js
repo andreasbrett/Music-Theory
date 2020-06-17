@@ -471,9 +471,10 @@ function populateRootNotes() {
 }
 
 
+function init() {
+	// populate root notes
+	populateRootNotes();
 
-// populate root notes
-populateRootNotes();
-
-// show initial key
-showKey();
+	// show initial key
+	showKey();
+}
