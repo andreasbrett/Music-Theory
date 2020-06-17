@@ -1,0 +1,65 @@
+* {
+  font-family: Arial, sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.mark-red {
+	background-color: #fee;
+	color: #c00;
+}
+
+.color-red {
+	color: #c00;
+}
+
+.left {
+	text-align: left;
+}
+
+.wide {
+  width: 200px;
+}
+
+#guitar .fret0 {
+	background-color: #ccc;
+	font-weight: bold;
+}
+
+#guitar .fret12 {
+	background-color: #eee;
+}
+
+#guitar sup {
+	color: #aaa;
+}
+
+table {
+  border: 1px solid #ccc;
+  font-size: 10pt;
+	margin-bottom: 45px;
+}
+
+th {
+  background-color: #eee;
+}
+
+tr {
+  background-color: #fff;
+}
+
+td,
+th {
+  width: 75px;
+	height: 20px;
+  border: 1px solid #eee;
+  padding: 5px;
+	text-align: center;
+	vertical-align: middle;
+}
